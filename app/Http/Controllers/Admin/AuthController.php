@@ -25,9 +25,8 @@ class AuthController extends Controller
             array_push($quotes, Inspiring::quote());
         }
 
-        $financialYear = FinancialYear::latest()->get();
 
-        return view('admin.auth.login')->with(['quotes' => $quotes, 'financialYear' => $financialYear]);
+        return view('admin.auth.login')->with(['quotes' => $quotes]);
     }
 
     public function login(Request $request)
@@ -49,7 +48,6 @@ class AuthController extends Controller
             $password = $request->password;
             $remember_me = $request->has('remember_me') ? true : false;
 
-            $financialYear = FinancialYear::where('id', $request->financial_year)->latest()->first();
 
             try {
                 $user = User::where('mobile', $username)->first();
@@ -63,21 +61,6 @@ class AuthController extends Controller
                 if (!auth()->attempt(['mobile' => $username, 'password' => $password], $remember_me))
                     return response()->json(['error2' => 'Your entered credentials are invalid']);
 
-
-                if (Auth::user()->hasRole(['Ward HOD'])) {
-                    $ward = Ward::find(Auth::user()->ward_id);
-
-                    session(['ward_name' => $ward ? $ward->name : '']);
-                } elseif (Auth::user()->hasRole(['Department HOD'])) {
-                    $ward = Ward::find(Auth::user()->ward_id);
-                    $department = Department::find(Auth::user()->department_id);
-
-                    session(['ward_name' => $ward ? $ward->name : '']);
-                    session(['departmentname' => $ward ? $department->name : '']);
-                } else {
-                    session()->forget('ward_name');
-                    session()->forget('departmentname');
-                }
 
 
                 $userType = '';

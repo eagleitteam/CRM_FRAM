@@ -46,6 +46,7 @@ Route::middleware(['auth', 'PreventBackHistory'])->group(function () {
 // vehivle size type
 
     Route::resource('vehicle-types', App\Http\Controllers\Admin\Masters\VehicleTypeMasterController::class);
+    Route::resource('vehicle-types', App\Http\Controllers\Admin\Masters\VehicleTypeMasterController::class);
 
 
     // Masters

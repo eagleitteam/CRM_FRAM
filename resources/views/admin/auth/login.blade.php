@@ -164,7 +164,6 @@
                         if(data.user.updated_by == null){
                             window.location.href = '{{ route('show-change-password') }}';
                         }else{
-                            window.location.href = '{{ route('salary-slips.index') }}';
                         }
                     }else{
                         window.location.href = '{{ route('dashboard') }}';
