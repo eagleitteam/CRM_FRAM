@@ -93,9 +93,32 @@ class PermissionTableSeeder extends Seeder
                 'id' => 16,
                 'name' => 'wards.delete',
                 'group' => 'wards',
-            ]
-            
-
+            ],
+            [
+                'id' => 17,
+                'name' => 'vehicle-types.view',
+                'group' => 'vehicle-types',
+            ],
+            [
+                'id' => 18,
+                'name' => 'vehicle-types.create',
+                'group' => 'vehicle-types',
+            ],
+            [
+                'id' => 19,
+                'name' => 'vehicle-types.edit',
+                'group' => 'vehicle-types',
+            ],
+            [
+                'id' => 20,
+                'name' => 'vehicle-types.delete',
+                'group' => 'vehicle-types',
+            ],
+            [
+                'id' => 21,
+                'name' => 'masters.view',
+                'group' => 'masters',
+            ],
 
         ];
 

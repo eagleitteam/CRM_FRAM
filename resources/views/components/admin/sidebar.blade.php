@@ -4,19 +4,19 @@
         <!-- Dark Logo-->
         <a href="index.html" class="logo logo-dark">
             <span class="logo-sm">
-                <img src="{{ asset('admin/images/logo.png') }}" alt="" height="50" />
+                <img src="{{ asset('admin/images/logo_sm.png') }}" alt="" height="50" />
             </span>
             <span class="logo-lg">
-                <img src="{{ asset('admin/images/logo.png') }}" alt="" height="50" />
+                <img src="{{ asset('admin/images/logo_lg.png') }}" alt="" height="50" />
             </span>
         </a>
         <!-- Light Logo-->
         <a href="index.html" class="logo logo-light">
             <span class="logo-sm">
-                <img src="{{ asset('admin/images/logo.png') }}" alt="" height="50" />
+                <img src="{{ asset('admin/images/logo_sm.png') }}" alt="" height="50" />
             </span>
             <span class="logo-lg">
-                <img src="{{ asset('admin/images/logo.png') }}" alt="" height="50" />
+                <img src="{{ asset('admin/images/logo_lg.png') }}" alt="" height="50" />
             </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
@@ -73,6 +73,52 @@
                                     <a href="{{ route('wards.index') }}" class="nav-link {{ request()->routeIs('wards.index') ? 'active' : '' }}" data-key="t-horizontal">Wards</a>
                                 </li>
                             @endcan
+                            @can('vehicle-types.view')
+                                <li class="nav-item">
+                                    <a href="{{ route('vehicle-types.index') }}" class="nav-link {{ request()->routeIs('vehicle-types.index') ? 'active' : '' }}" data-key="t-horizontal">Vehicle Types</a>
+                                </li>
+                            @endcan
+                           
+                        </ul>
+                    </div>
+                </li>
+                @endcanany
+
+                <!-- Masters Menu bar -->
+
+                @canany(['masters.view'])
+                <li class="nav-item">
+                    <a class="nav-link menu-link {{ request()->routeIs('masters.index') ? 'active' : 'collapsed' }}" href="#sidebarAuth1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth1">
+                        <i class="ri-account-circle-line"></i> <span data-key="t-authentication">Masters Menu</span>
+                    </a>
+                    <div class="collapse menu-dropdown {{ request()->routeIs('masters.index') ? 'show' : '' }}" id="sidebarAuth1">
+                        <ul class="nav nav-sm flex-column">
+                            @canany(['users.view', 'roles.view'])
+                            <li class="nav-item">
+                                <a href="#sidebarSignUp" class="nav-link {{ request()->routeIs('users.index') || request()->routeIs('roles.index') ? 'active' : '' }}" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarSignUp" data-key="t-signup"> User Management
+                                </a>
+                                <div class="collapse menu-dropdown {{ request()->routeIs('users.index') || request()->routeIs('roles.index') ? 'show' : '' }}" id="sidebarSignUp">
+                                    <ul class="nav nav-sm flex-column">
+                                        @can('users.view')
+                                            <li class="nav-item">
+                                                <a href="{{ route('users.index') }}" class="nav-link {{ request()->routeIs('users.index') ? 'active' : '' }}" data-key="t-horizontal">Users</a>
+                                            </li>
+                                        @endcan
+                                        @can('roles.view')
+                                            <li class="nav-item">
+                                                <a href="{{ route('roles.index') }}" class="nav-link {{ request()->routeIs('roles.index') ? 'active' : '' }}" data-key="t-horizontal">Roles</a>
+                                            </li>
+                                        @endcan
+                                    </ul>
+                                </div>
+                            </li>
+                            @endcanany
+                            @can('wards.view')
+                                <li class="nav-item">
+                                    <a href="{{ route('wards.index') }}" class="nav-link {{ request()->routeIs('wards.index') ? 'active' : '' }}" data-key="t-horizontal">Wards</a>
+                                </li>
+                            @endcan
+                            
                            
                         </ul>
                     </div>

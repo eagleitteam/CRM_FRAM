@@ -27,8 +27,8 @@
 
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-primary" id="addSubmit">Submit</button>
-                        <button type="reset" class="btn btn-warning">Reset</button>
+                        <button type="submit" class="btn btn-outline-success btn-border" id="addSubmit">Submit</button>
+                        <button type="reset" class="btn btn-soft-warning btn-border">Reset</button>
                     </div>
                 </form>
             </div>
@@ -65,8 +65,8 @@
 
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-primary" id="editSubmit">Submit</button>
-                        <button type="reset" class="btn btn-warning">Reset</button>
+                        <button class="btn btn-outline-success btn-border" id="editSubmit">Submit</button>
+                        <button type="reset" class="btn btn-soft-warning btn-border">Reset</button>
                     </div>
                 </section>
             </form>
@@ -82,8 +82,8 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="">
-                                    <button id="addToTable" class="btn btn-primary">Add <i class="fa fa-plus"></i></button>
-                                    <button id="btnCancel" class="btn btn-danger" style="display:none;">Cancel</button>
+                                    <button id="addToTable" class="btn btn-outline-primary btn-border">Add <i class="fa fa-plus"></i></button>
+                                    <button id="btnCancel" class="btn btn-soft-danger btn-border" style="display:none;">Cancel</button>
                                 </div>
                             </div>
                         </div>
@@ -92,27 +92,30 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table id="buttons-datatables" class="table table-bordered nowrap align-middle" style="width:100%">
-                            <thead>
+                            <thead style="background-color: rgba(var(--vz-light-rgb), .75);">
                                 <tr>
-                                    <th>Sr No.</th>
+                                    <th class="table-srno-column">Sr No.</th>
                                     <th>Ward Name</th>
                                     <th>Ward Initial</th>
-                                    <th>Action</th>
+                                    <th class="table-action-column">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($wards as $ward)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td class="text-center align-middle">{{ $loop->iteration }}</td>
                                         <td>{{ $ward->name }}</td>
                                         <td>{{ $ward->initial }}</td>
                                         <td>
                                             @can('wards.edit')
-                                                <button class="edit-element btn btn-secondary px-2 py-1" title="Edit ward" data-id="{{ $ward->id }}"><i data-feather="edit"></i></button>
+                                                <button class="edit-element btn btn-soft-secondary px-2 py-1" title="Edit ward" data-id="{{ $ward->id }}"><i class="ri-edit-box-line fs-4 w-100 h-100 text-center"></i></button>
                                             @endcan
                                             @can('wards.delete')
-                                                <button class="btn btn-danger rem-element px-2 py-1" title="Delete ward" data-id="{{ $ward->id }}"><i data-feather="trash-2"></i> </button>
+                                                <button class="delete-element btn btn-soft-danger rem-element px-2 py-1" title="Delete ward" data-id="{{ $ward->id }}"><i class="ri-delete-bin-2-line fs-4 w-100 h-100 text-center"></i> </button>
                                             @endcan
+                                            
+                                            
+
                                         </td>
                                     </tr>
                                 @endforeach

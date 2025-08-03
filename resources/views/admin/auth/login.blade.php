@@ -29,7 +29,7 @@
                             <div class="row g-0">
 
                                 <div class="col-lg-6">
-                                    <img src="{{ asset('admin/images/Payroll.jpg') }}" alt="" width="100%" height="100%">
+                                    <img src="{{ asset('admin/images/auth-one-bg.png') }}" alt="" width="100%" height="100%">
                                     <div class="p-lg-5 p-4 auth-one-bg h-100 d-none">
                                         <div class="bg-overlay"></div>
                                         <div class="position-relative h-100 d-flex flex-column">
@@ -66,7 +66,7 @@
                                     <div class="p-lg-5 p-4">
 
                                         <div class="text-center">
-                                            <img src="{{ asset('admin/images/login-logo.png') }}" width="200" height="180" alt="">
+                                            <img src="{{ asset('admin/images/login-logo.png') }}" width="174" height="180" alt="">
                                             {{-- <h5 class="text-white text-center pt-3">HRMS मध्ये आपले स्वागत आहे</h5> --}}
                                         </div>
 
