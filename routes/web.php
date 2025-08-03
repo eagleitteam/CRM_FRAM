@@ -43,10 +43,14 @@ Route::middleware(['auth', 'PreventBackHistory'])->group(function () {
     Route::get('show-change-password', [App\Http\Controllers\Admin\AuthController::class, 'showChangePassword'])->name('show-change-password');
     Route::post('change-password', [App\Http\Controllers\Admin\AuthController::class, 'changePassword'])->name('change-password');
 
-// vehivle size type
+    // vehicle size type
 
     Route::resource('vehicle-types', App\Http\Controllers\Admin\Masters\VehicleTypeMasterController::class);
     Route::resource('vehicle-types', App\Http\Controllers\Admin\Masters\VehicleTypeMasterController::class);
+    
+    //location
+    Route::resource('location', App\Http\Controllers\Admin\Masters\LocationController::class);
+    
 
 
     // Masters

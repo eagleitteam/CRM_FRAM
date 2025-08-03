@@ -119,6 +119,26 @@ class PermissionTableSeeder extends Seeder
                 'name' => 'masters.view',
                 'group' => 'masters',
             ],
+            [
+                'id' => 22,
+                'name' => 'location.view',
+                'group' => 'location',
+            ],
+            [
+                'id' => 23,
+                'name' => 'location.create',
+                'group' => 'location',
+            ],
+            [
+                'id' => 24,
+                'name' => 'location.edit',
+                'group' => 'location',
+            ],
+            [
+                'id' => 25,
+                'name' => 'location.delete',
+                'group' => 'location',
+            ],
 
         ];
 

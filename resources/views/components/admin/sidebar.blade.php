@@ -88,10 +88,10 @@
 
                 @canany(['masters.view'])
                 <li class="nav-item">
-                    <a class="nav-link menu-link {{ request()->routeIs('masters.index') ? 'active' : 'collapsed' }}" href="#sidebarAuth1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth1">
+                    <a class="nav-link menu-link {{ request()->routeIs('masters.index') || request()->routeIs('location.index') ? 'active' : 'collapsed' }}" href="#sidebarAuth1" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarAuth1">
                         <i class="ri-account-circle-line"></i> <span data-key="t-authentication">Masters Menu</span>
                     </a>
-                    <div class="collapse menu-dropdown {{ request()->routeIs('masters.index') ? 'show' : '' }}" id="sidebarAuth1">
+                    <div class="collapse menu-dropdown {{ request()->routeIs('masters.index') || request()->routeIs('location.index') ? 'show' : '' }}" id="sidebarAuth1">
                         <ul class="nav nav-sm flex-column">
                             @canany(['users.view', 'roles.view'])
                             <li class="nav-item">
@@ -113,9 +113,9 @@
                                 </div>
                             </li>
                             @endcanany
-                            @can('wards.view')
+                            @can('location.view')
                                 <li class="nav-item">
-                                    <a href="{{ route('wards.index') }}" class="nav-link {{ request()->routeIs('wards.index') ? 'active' : '' }}" data-key="t-horizontal">Wards</a>
+                                    <a href="{{ route('location.index') }}" class="nav-link {{ request()->routeIs('location.index') ? 'active' : '' }}" data-key="t-horizontal">Location</a>
                                 </li>
                             @endcan
                             
