@@ -118,6 +118,16 @@
                                     <a href="{{ route('location.index') }}" class="nav-link {{ request()->routeIs('location.index') ? 'active' : '' }}" data-key="t-horizontal">Location</a>
                                 </li>
                             @endcan
+                            @can('expenses.view')
+                                <li class="nav-item">
+                                    <a href="{{ route('expenses.index') }}" class="nav-link {{ request()->routeIs('expenses.index') ? 'active' : '' }}" data-key="t-horizontal">Expenses</a>
+                                </li>
+                            @endcan
+                             @can('commission.view')
+                                <li class="nav-item">
+                                    <a href="{{ route('commission.index') }}" class="nav-link {{ request()->routeIs('commission.index') ? 'active' : '' }}" data-key="t-horizontal">Commissions</a>
+                                </li>
+                            @endcan
                             
                            
                         </ul>

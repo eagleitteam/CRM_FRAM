@@ -51,7 +51,11 @@ Route::middleware(['auth', 'PreventBackHistory'])->group(function () {
     //location
     Route::resource('location', App\Http\Controllers\Admin\Masters\LocationController::class);
     
+    // Expenses
+    Route::resource('expenses', App\Http\Controllers\Admin\Masters\ExpensesController::class);
 
+    // Commission
+    Route::resource('commission', App\Http\Controllers\Admin\Masters\CommissionController::class);
 
     // Masters
     Route::resource('wards', App\Http\Controllers\Admin\Masters\WardController::class);

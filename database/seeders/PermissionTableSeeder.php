@@ -139,6 +139,47 @@ class PermissionTableSeeder extends Seeder
                 'name' => 'location.delete',
                 'group' => 'location',
             ],
+            [
+                'id' => 26,
+                'name' => 'expenses.view',
+                'group' => 'expenses',
+            ],
+            [
+                'id' => 27,
+                'name' => 'expenses.create',
+                'group' => 'expenses',
+            ],
+            [
+                'id' => 28,
+                'name' => 'expenses.edit',
+                'group' => 'expenses',
+            ],
+            [
+                'id' => 29,
+                'name' => 'expenses.delete',
+                'group' => 'expenses',
+            ],
+            [
+                'id' => 30,
+                'name' => 'commission.view',
+                'group' => 'commission',
+            ],
+            [
+                'id' => 31,
+                'name' => 'commission.create',
+                'group' => 'commission',
+            ],
+            [
+                'id' => 32,
+                'name' => 'commission.edit',
+                'group' => 'commission',
+            ],
+            [
+                'id' => 33,
+                'name' => 'commission.delete',
+                'group' => 'commission',
+            ],
+
 
         ];
 

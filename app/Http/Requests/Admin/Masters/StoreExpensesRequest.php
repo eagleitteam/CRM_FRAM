@@ -5,8 +5,7 @@ namespace App\Http\Requests\Admin\Masters;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-
-class StoreLocationRequest extends FormRequest
+class StoreExpensesRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +23,8 @@ class StoreLocationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', Rule::unique('locations')->whereNull('deleted_at')],
-            'initial' => 'required',
-            
+            'name' => ['required', Rule::unique('expenses')->whereNull('deleted_at')],
+            'initial' => 'nullable',
         ];
     }
 }

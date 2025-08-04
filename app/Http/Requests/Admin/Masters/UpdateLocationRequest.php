@@ -22,7 +22,7 @@ class UpdateLocationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:255',
+            'name' => 'required|unique|string|max:255',
             'initial' => 'required',
             'status' => 'required|in:1,2', // 1 for active, 2 for inactive
         ];
