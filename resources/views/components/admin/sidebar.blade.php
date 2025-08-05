@@ -123,12 +123,17 @@
                                     <a href="{{ route('expenses.index') }}" class="nav-link {{ request()->routeIs('expenses.index') ? 'active' : '' }}" data-key="t-horizontal">Expenses</a>
                                 </li>
                             @endcan
-                             @can('commission.view')
+                            @can('commission.view')
                                 <li class="nav-item">
                                     <a href="{{ route('commission.index') }}" class="nav-link {{ request()->routeIs('commission.index') ? 'active' : '' }}" data-key="t-horizontal">Commissions</a>
                                 </li>
                             @endcan
-                            
+                            @can('salestag.view')
+                                <li class="nav-item">
+                                    <a href="{{ route('salestags.index') }}" class="nav-link {{ request()->routeIs('salestags.index') ? 'active' : '' }}" data-key="t-horizontal">Salestags</a>
+                                </li>
+                            @endcan
+
                            
                         </ul>
                     </div>

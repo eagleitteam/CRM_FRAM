@@ -59,6 +59,9 @@ Route::middleware(['auth', 'PreventBackHistory'])->group(function () {
 
     // Masters
     Route::resource('wards', App\Http\Controllers\Admin\Masters\WardController::class);
+
+    // Salestags
+    Route::resource('salestags', App\Http\Controllers\Admin\Masters\SalestagController::class);
    
 
 
