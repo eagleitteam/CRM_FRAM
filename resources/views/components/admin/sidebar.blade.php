@@ -133,6 +133,11 @@
                                     <a href="{{ route('salestags.index') }}" class="nav-link {{ request()->routeIs('salestags.index') ? 'active' : '' }}" data-key="t-horizontal">Salestags</a>
                                 </li>
                             @endcan
+                            @can('frams.view')
+                                <li class="nav-item">
+                                    <a href="{{ route('frams.index') }}" class="nav-link {{ request()->routeIs('frams.index') ? 'active' : '' }}" data-key="t-horizontal">Add New Frams</a>
+                                </li>
+                            @endcan
 
                            
                         </ul>

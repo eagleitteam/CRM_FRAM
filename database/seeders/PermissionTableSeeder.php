@@ -199,6 +199,26 @@ class PermissionTableSeeder extends Seeder
                 'name' => 'salestag.delete',
                 'group' => 'salestag',
             ],
+            [
+                'id' => 38,
+                'name' => 'frams.view',
+                'group' => 'frams',
+            ],
+            [
+                'id' => 39,
+                'name' => 'frams.create',
+                'group' => 'frams',
+            ],
+            [
+                'id' => 40,
+                'name' => 'frams.edit',
+                'group' => 'frams',
+            ],
+            [
+                'id' => 41,
+                'name' => 'frams.delete',
+                'group' => 'frams',
+            ],
 
 
         ];

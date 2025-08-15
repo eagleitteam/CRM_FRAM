@@ -63,6 +63,8 @@ Route::middleware(['auth', 'PreventBackHistory'])->group(function () {
     // Salestags
     Route::resource('salestags', App\Http\Controllers\Admin\Masters\SalestagController::class);
    
+    // Fram
+    Route::resource('frams', App\Http\Controllers\Admin\Masters\FramController::class);
 
 
     // Users Roles n Permissions
