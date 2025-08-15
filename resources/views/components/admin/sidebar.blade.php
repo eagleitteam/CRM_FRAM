@@ -138,6 +138,11 @@
                                     <a href="{{ route('frams.index') }}" class="nav-link {{ request()->routeIs('frams.index') ? 'active' : '' }}" data-key="t-horizontal">Add New Frams</a>
                                 </li>
                             @endcan
+                            @can('yearmaster.view')
+                                <li class="nav-item">
+                                    <a href="{{ route('yearmaster.index') }}" class="nav-link {{ request()->routeIs('yearmaster.index') ? 'active' : '' }}" data-key="t-horizontal">Yearmaster</a>
+                                </li>
+                            @endcan
 
                            
                         </ul>

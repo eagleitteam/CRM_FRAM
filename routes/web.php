@@ -66,6 +66,9 @@ Route::middleware(['auth', 'PreventBackHistory'])->group(function () {
     // Fram
     Route::resource('frams', App\Http\Controllers\Admin\Masters\FramController::class);
 
+    // Yearmaster
+    Route::resource('yearmaster', App\Http\Controllers\Admin\Masters\YearmasterController::class);
+
 
     // Users Roles n Permissions
     Route::resource('users', App\Http\Controllers\Admin\UserController::class);

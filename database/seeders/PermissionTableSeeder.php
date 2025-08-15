@@ -219,6 +219,26 @@ class PermissionTableSeeder extends Seeder
                 'name' => 'frams.delete',
                 'group' => 'frams',
             ],
+            [
+                'id' => 42,
+                'name' => 'yearmaster.view',
+                'group' => 'yearmaster',
+            ],
+            [
+                'id' => 43,
+                'name' => 'yearmaster.create',
+                'group' => 'yearmaster',
+            ],
+            [
+                'id' => 44,
+                'name' => 'yearmaster.edit',
+                'group' => 'yearmaster',
+            ],
+            [
+                'id' => 45,
+                'name' => 'yearmaster.delete',
+                'group' => 'yearmaster',
+            ],
 
 
         ];
