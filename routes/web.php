@@ -69,6 +69,8 @@ Route::middleware(['auth', 'PreventBackHistory'])->group(function () {
     // Yearmaster
     Route::resource('yearmaster', App\Http\Controllers\Admin\Masters\YearmasterController::class);
 
+    // Bankmaster
+    Route::resource('bankmaster', App\Http\Controllers\Admin\Masters\BankmasterController::class);
 
     // Users Roles n Permissions
     Route::resource('users', App\Http\Controllers\Admin\UserController::class);

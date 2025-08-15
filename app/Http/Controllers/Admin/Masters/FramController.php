@@ -27,7 +27,7 @@ class FramController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.masters.add-Edit-Frampage')->with(['frams' => $frams]);
     }
 
     /**

@@ -143,8 +143,11 @@
                                     <a href="{{ route('yearmaster.index') }}" class="nav-link {{ request()->routeIs('yearmaster.index') ? 'active' : '' }}" data-key="t-horizontal">Yearmaster</a>
                                 </li>
                             @endcan
-
-                           
+                            @can('bankmaster.view')
+                                <li class="nav-item">
+                                    <a href="{{ route('bankmaster.index') }}" class="nav-link {{ request()->routeIs('bankmaster.index') ? 'active' : '' }}" data-key="t-horizontal">Bank Master</a>
+                                </li>
+                            @endcan
                         </ul>
                     </div>
                 </li>
