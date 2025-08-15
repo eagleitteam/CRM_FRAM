@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Castillo The Villa",
+        "price": "₹4,000 - ₹10,000",
+        "location": "Near Karjan Village, Kamrej",
+        "bedrooms": 2,
+        "maxPersons": 20,
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+        "recommended": true
+    },
+    {
+        "name": "Green Valley Farmhouse",
+        "price": "₹3,500 - ₹9,000",
+        "location": "Dumas Road, Surat",
+        "bedrooms": 3,
+        "maxPersons": 25,
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+        "recommended": false
+    },
+    {
+        "name": "Riverside Retreat",
+        "price": "₹5,000 - ₹12,000",
+        "location": "Tapi Riverfront, Surat",
+        "bedrooms": 4,
+        "maxPersons": 30,
+        "image": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6",
+        "recommended": true
+    },
+    {
+        "name": "Sunny Meadows",
+        "price": "₹3,000 - ₹8,000",
+        "location": "Sayan, Olpad",
+        "bedrooms": 2,
+        "maxPersons": 15,
+        "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154",
+        "recommended": false
+    },
+    {
+        "name": "Royal Orchard",
+        "price": "₹6,000 - ₹15,000",
+        "location": "Bardoli Road, Surat",
+        "bedrooms": 5,
+        "maxPersons": 35,
+        "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+        "recommended": true
+    }
+]
